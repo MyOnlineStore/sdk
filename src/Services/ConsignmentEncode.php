@@ -95,6 +95,7 @@ class ConsignmentEncode
                     'hide_sender'       => Helpers::intOrNull($consignment->hasHideSender()),
                     'extra_assurance'   => Helpers::intOrNull($consignment->hasExtraAssurance()),
                     'printerless_return'=> Helpers::intOrNull($consignment->isPrinterlessReturn()),
+                    'priority_delivery' => Helpers::intOrNull($consignment->isPriorityDelivery()),
                 ]),
             ]
         );

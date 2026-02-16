@@ -56,6 +56,11 @@ abstract class AbstractShipmentOptionsAdapter
     protected $insurance;
 
     /**
+     * @var bool|null
+     */
+    protected $priority_delivery;
+
+    /**
      * @var string|null
      */
     protected $label_description;
@@ -150,6 +155,14 @@ abstract class AbstractShipmentOptionsAdapter
     public function getInsurance(): ?int
     {
         return $this->insurance;
+    }
+
+    /**
+     * @return bool|null
+     */
+    public function isPriorityDelivery(): ?bool
+    {
+        return $this->priority_delivery;
     }
 
     /**

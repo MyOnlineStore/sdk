@@ -47,6 +47,7 @@ abstract class AbstractConsignment
     public const SHIPMENT_OPTION_SIGNATURE          = 'signature';
     public const SHIPMENT_OPTION_COLLECT            = 'collect';
     public const SHIPMENT_OPTION_RECEIPT_CODE       = 'receipt_code';
+    public const SHIPMENT_OPTION_PRIORITY_DELIVERY  = 'priority_delivery';
     /**
      * @deprecated since jan 2023 extra_assurance is no longer supported
      */
@@ -62,6 +63,7 @@ abstract class AbstractConsignment
             self::SHIPMENT_OPTION_SIGNATURE,
             self::SHIPMENT_OPTION_COLLECT,
             self::SHIPMENT_OPTION_RECEIPT_CODE,
+            self::SHIPMENT_OPTION_PRIORITY_DELIVERY,
         ];
 
     public const EXTRA_OPTION_DELIVERY_DATE     = 'delivery_date';
@@ -449,6 +451,12 @@ abstract class AbstractConsignment
      * @var int
      */
     public $insurance = 0;
+
+    /**
+     * @internal
+     * @var bool
+     */
+    public $priority_delivery = false;
 
     /**
      * @internal
@@ -1786,6 +1794,16 @@ abstract class AbstractConsignment
     public function getInsurance(): int
     {
         return $this->insurance;
+    }
+
+    public function setPriorityDelivery(bool $priorityDelivery): ?bool
+    {
+        return $this->priority_delivery = $priorityDelivery;
+    }
+
+    public function isPriorityDelivery(): ?bool
+    {
+        return $this->priority_delivery;
     }
 
     /**
