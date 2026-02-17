@@ -1796,9 +1796,11 @@ abstract class AbstractConsignment
         return $this->insurance;
     }
 
-    public function setPriorityDelivery(bool $priorityDelivery): ?bool
+    public function setPriorityDelivery(bool $priorityDelivery): self
     {
-        return $this->priority_delivery = $priorityDelivery;
+        $this->priority_delivery = $priorityDelivery;
+
+        return $this;
     }
 
     public function isPriorityDelivery(): ?bool
