@@ -63,7 +63,6 @@ abstract class AbstractConsignment
             self::SHIPMENT_OPTION_SIGNATURE,
             self::SHIPMENT_OPTION_COLLECT,
             self::SHIPMENT_OPTION_RECEIPT_CODE,
-            self::SHIPMENT_OPTION_PRIORITY_DELIVERY,
         ];
 
     public const EXTRA_OPTION_DELIVERY_DATE     = 'delivery_date';
